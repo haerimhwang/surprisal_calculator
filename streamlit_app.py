@@ -81,18 +81,18 @@ col1, col2, col3 = st.columns([0.4,0.1,0.5])
 
 col1.header("surprisal value of each token")
 sentence_draft = surprisal_calculator(sentence)
-sentence_removed = str(sentence_draft).replace("Ġ", "")
-sentence_output = text_number_split(sentence_removed)
+sentence_output = str(sentence_draft).replace("Ġ", "")
+
+if len(sentence) >0 "
+   #col1.markdown('<p style="color: white; font-size: 20px;"> The surprisal value for this sentence is: </p>', unsafe_allow_html=True)
+   col1.markdown(f'<p style="color:#e8fc03; font-size: 20px;"> {sentence_output} </p>', unsafe_allow_html=True)
 
 
-#col1.markdown('<p style="color: white; font-size: 20px;"> The surprisal value for this sentence is: </p>', unsafe_allow_html=True)
-col1.markdown(f'<p style="color:#e8fc03; font-size: 20px;"> {sentence_output} </p>', unsafe_allow_html=True)
 
+   col3.header("plot")
+   col3.pyplot(plot_output)
 
-
-col3.header("plot")
-col3.pyplot(plot_output)
-
+   
 
 
 
