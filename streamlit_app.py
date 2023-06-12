@@ -73,19 +73,19 @@ def text_number_split(sentence_draft):
     return head, tail
 
 
-sentence = st.text_input('Type your sentence below ⬇', 'Hi, there!', label_visibility="visible")
+sentence = st.text_input('Type your sentence below and press Enter/Return ⬇', 'Hi, there!', label_visibility="visible")
 
 plot_output = plot_generator(sentence)
 
 col1, col2, col3 = st.columns([0.4,0.1,0.5])
 
-col1.header("values")
+col1.header("surprisal value of each token")
 sentence_draft = surprisal_calculator(sentence)
 sentence_removed = str(sentence_draft).replace("Ġ", "")
 sentence_output = text_number_split(sentence_removed)[0]
 surprisal_output = text_number_split(sentence_removed)[1]
 
-col1.markdown('<p style="color: white; font-size: 20px;"> The surprisal value for this sentence is: </p>', unsafe_allow_html=True)
+#col1.markdown('<p style="color: white; font-size: 20px;"> The surprisal value for this sentence is: </p>', unsafe_allow_html=True)
 col1.markdown(f'<p style="color:#e8fc03; font-size: 20px;"> {sentence_output} </p>', unsafe_allow_html=True)
 col1.markdown(f'<p style="color:#e8fc03; font-size: 20px;"> {surprisal_output} </p>', unsafe_allow_html=True)
 
