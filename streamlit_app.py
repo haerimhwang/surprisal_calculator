@@ -92,10 +92,6 @@ if sentence:
 
 else:
    col1.header("surprisal value of each token")
-   sentence_draft = surprisal_calculator(sentence)
-   sentence_output = str(sentence_draft).replace("Ġ", "")
-   
-   #col1.markdown('<p style="color: white; font-size: 20px;"> The surprisal value for this sentence is: </p>', unsafe_allow_html=True)
    col1.markdown(f'<p style="color:#e8fc03; font-size: 20px;">  </p>', unsafe_allow_html=True)
 
    col3.header("plot")
