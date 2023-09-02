@@ -41,8 +41,7 @@ st.markdown(f'<p style="text-align: right; margin-bottom: 0"> Reference: <a href
 
 st.markdown("""---""")
 
-@st.cache_resource
-#@st.cache
+#@st.cache_resource
 
 def surprisal_calculator(input_text):
 
