@@ -3,7 +3,6 @@ st.set_page_config(layout="wide")
 
 
 import surprisal
-import transformers
 
 def load_css(file_name = "path/to/file.css"):
    with open(file_name) as f:
