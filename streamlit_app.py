@@ -1,4 +1,5 @@
 import streamlit as st
+from surprisal import model
 st.set_page_config(layout="wide")
 
 
@@ -43,8 +44,6 @@ st.markdown("""---""")
 #@st.cache_resource
 
 def surprisal_calculator(input_text):
-
-    from surprisal import model
     m = model.AutoTransformerModel.from_pretrained('gpt2')
 
     for result in m.surprise(input_text):
@@ -52,7 +51,6 @@ def surprisal_calculator(input_text):
 
 
 def plot_generator(input_text):
-    from surprisal import model
     m = model.AutoTransformerModel.from_pretrained('gpt2')
 
     from matplotlib import pyplot as plt
