@@ -96,17 +96,3 @@ else:
    col3.header("plot")
    col3.markdown(f'<p style="color:#e8fc03; font-size: 20px;">  </p>', unsafe_allow_html=True)
 
-
-   
-
-
-
-
-
-
-
-   
-
-
-
-
